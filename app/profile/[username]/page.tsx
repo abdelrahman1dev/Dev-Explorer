@@ -1,19 +1,26 @@
-import { getGitHubUser , getUserRepos } from "../../utils/github"
+import { Copy } from "lucide-react"
+import { getGitHubUser, getUserRepos } from "../../utils/github"
+import CopyButton from "@/app/components/Copyto";
+import Exitbtn from "@/app/components/Exitbtn";
 
 export default async function ProfilePage({ params }: { params: { username: string } }) {
 
-    const user = await getGitHubUser(params.username)
+  const user = await getGitHubUser(params.username);
 
-    return (
-        <>
-        <div className="p-8 text-center text-white">
+
+  return (
+    <>
+      <div className="p-8 text-center text-white w-full">
+        <Exitbtn />
         <img
           src={user.avatar_url}
           alt={user.login}
           className="w-32 h-32 rounded-full mx-auto"
         />
-        <h1 className="text-2xl font-bold mt-4">{user.name}</h1>
-        <p className="text-gray-500">@{user.login}</p>
+        <a href={`https://github.com/${user.login}`} className="w-[10%]"><h1 className="text-2xl font-bold mt-4">{user.name}</h1></a>
+        <div >
+          <p className="text-gray-500 flex items-center justify-center gap-3">@{user.login} <CopyButton text={`https://github.com/${user.login}`} /></p>
+        </div>
         <p className="mt-2">Repos: {user.public_repos}</p>
 
       </div>
@@ -31,6 +38,6 @@ export default async function ProfilePage({ params }: { params: { username: stri
           )))}
         </div>
       </div></>
-    )
-  } 
+  )
+}
 
