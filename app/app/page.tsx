@@ -1,7 +1,9 @@
 import React from 'react'
-import Aurora from '../components/lightraysbg'
+import dynamic from 'next/dynamic'
 import SearchBar from '../components/SearchInput'
-import { Github } from 'lucide-react'
+
+
+const Aurora = dynamic(() => import("../components/lightraysbg"), { ssr: false })
 
 function Page() {
   return (
