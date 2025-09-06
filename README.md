@@ -4,7 +4,6 @@ Dev Explorer is a modern developer portfolio and project showcase built with **N
 It allows developers to dynamically display their projects, skills, and experience in a visually appealing and responsive way.  
 
 ![Demo](./demo.gif)  
-*(Replace with your actual demo GIF path — e.g., hosted on GitHub assets or inside `/public`)*
 
 ---
 
