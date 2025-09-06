@@ -3,7 +3,7 @@
 Dev Explorer is a modern developer portfolio and project showcase built with **Next.js**, **Tailwind CSS**, and **Framer Motion**.  
 It allows developers to dynamically display their projects, skills, and experience in a visually appealing and responsive way.  
 
-![Demo](./demo.gif)  
+![Demo](public/demo.gif)  
 
 ---
 
